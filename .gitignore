@@ -1,5 +1,9 @@
 /data
 /models
+models/
+/local_dataset
+/test_output_5b
+test_output_14b/
 /scripts
 /diffusers
 *.pkl
@@ -11,6 +15,8 @@
 *.DS_Store
 *.msc
 *.mv
+*.mp4
+**/*.mp4
 log*.txt
 
 # Byte-compiled / optimized / DLL files

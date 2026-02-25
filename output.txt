@@ -1,0 +1,22 @@
+To avoid repeatedly downloading model files, (Wan-AI/Wan2.2-TI2V-5B, models_t5_umt5-xxl-enc-bf16.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'models_t5_umt5-xxl-enc-bf16.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+To avoid repeatedly downloading model files, (Wan-AI/Wan2.2-TI2V-5B, Wan2.2_VAE.pth) is redirected to ('DiffSynth-Studio/Wan-Series-Converted-Safetensors', 'Wan2.2_VAE.safetensors'). You can use `redirect_common_files=False` to disable file redirection.
+Downloading Model from https://www.modelscope.cn to directory: /dev_vepfs/fly/resoning/DiffSynth-Studio/models/DiffSynth-Studio/Wan-Series-Converted-Safetensors
+Loading models from: "./models/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors"
+Traceback (most recent call last):
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/examples/wanvideo/model_inference/Wan2.2-TI2V-5B.py", line 7, in <module>
+    pipe = WanVideoPipeline.from_pretrained(
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/diffsynth/pipelines/wan_video.py", line 135, in from_pretrained
+    model_pool = pipe.download_and_load_models(model_configs, vram_limit)
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/diffsynth/diffusion/base_pipeline.py", line 294, in download_and_load_models
+    model_pool.auto_load_model(
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/diffsynth/models/model_loader.py", line 71, in auto_load_model
+    model = self.load_model_file(config, path, vram_config, vram_limit=vram_limit, state_dict=state_dict)
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/diffsynth/models/model_loader.py", line 40, in load_model_file
+    model = load_model(
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/diffsynth/core/loader/model.py", line 50, in load_model
+    state_dict = {i: state_dict[i] for i in state_dict}
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/diffsynth/core/loader/model.py", line 50, in <dictcomp>
+    state_dict = {i: state_dict[i] for i in state_dict}
+  File "/dev_vepfs/fly/resoning/DiffSynth-Studio/diffsynth/core/vram/disk_map.py", line 62, in __getitem__
+    param = self.files[file_id].get_tensor(name)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 79.33 GiB of which 73.56 MiB is free. Process 1438054 has 880.00 MiB memory in use. Process 1437988 has 3.27 GiB memory in use. Process 1437990 has 2.53 GiB memory in use. Process 1437989 has 1.52 GiB memory in use. Process 2081686 has 66.17 GiB memory in use. Process 2438865 has 4.20 GiB memory in use. Of the allocated memory 3.80 GiB is allocated by PyTorch, and 1.80 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -469,7 +469,11 @@ class Down_ResidualBlock(nn.Module):
     def forward(self, x, feat_cache=None, feat_idx=[0]):
         x_copy = x.clone()
         for module in self.downsamples:
-            x = module(x, feat_cache, feat_idx)
+            result = module(x, feat_cache, feat_idx)
+            if isinstance(result, tuple):
+                x = result[0]
+            else:
+                x = result
 
         return x + self.avg_shortcut(x_copy), feat_cache, feat_idx
 
@@ -506,10 +510,14 @@ class Up_ResidualBlock(nn.Module):
     def forward(self, x, feat_cache=None, feat_idx=[0], first_chunk=False):
         x_main = x.clone()
         for module in self.upsamples:
-            x_main = module(x_main, feat_cache, feat_idx)
+            result = module(x_main, feat_cache, feat_idx)
+            if isinstance(result, tuple):
+                x_main = result[0]
+            else:
+                x_main = result
         if self.avg_shortcut is not None:
             x_shortcut = self.avg_shortcut(x, first_chunk)
-            return x_main + x_shortcut
+            return x_main + x_shortcut, feat_cache, feat_idx
         else:
             return x_main, feat_cache, feat_idx
 
