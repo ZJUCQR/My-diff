@@ -8,6 +8,7 @@ models/
 test_output_14b/
 /scripts
 /diffusers
+/results
 *.pkl
 *.safetensors
 *.pth

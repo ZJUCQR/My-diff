@@ -1,58 +1,0 @@
-Loading models from: "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors"
-Loaded model: {
-    "model_name": "wan_video_text_encoder",
-    "model_class": "diffsynth.models.wan_video_text_encoder.WanTextEncoder",
-    "extra_kwargs": null
-}
-Loading models from: [
-    "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/Wan-AI/Wan2.2-TI2V-5B/diffusion_pytorch_model-00001-of-00003.safetensors",
-    "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/Wan-AI/Wan2.2-TI2V-5B/diffusion_pytorch_model-00002-of-00003.safetensors",
-    "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/Wan-AI/Wan2.2-TI2V-5B/diffusion_pytorch_model-00003-of-00003.safetensors"
-]
-Loaded model: {
-    "model_name": "wan_video_dit",
-    "model_class": "diffsynth.models.wan_video_dit.WanModel",
-    "extra_kwargs": {
-        "has_image_input": false,
-        "patch_size": [
-            1,
-            2,
-            2
-        ],
-        "in_dim": 48,
-        "dim": 3072,
-        "ffn_dim": 14336,
-        "freq_dim": 256,
-        "text_dim": 4096,
-        "out_dim": 48,
-        "num_heads": 24,
-        "num_layers": 30,
-        "eps": 1e-06,
-        "seperated_timestep": true,
-        "require_clip_embedding": false,
-        "require_vae_embedding": false,
-        "fuse_vae_embedding_in_latents": true
-    }
-}
-Loading models from: "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.2_VAE.safetensors"
-Loaded model: {
-    "model_name": "wan_video_vae",
-    "model_class": "diffsynth.models.wan_video_vae.WanVideoVAE38",
-    "extra_kwargs": null
-}
-Using wan_video_text_encoder from "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/DiffSynth-Studio/Wan-Series-Converted-Safetensors/models_t5_umt5-xxl-enc-bf16.safetensors".
-Using wan_video_dit from [
-    "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/Wan-AI/Wan2.2-TI2V-5B/diffusion_pytorch_model-00001-of-00003.safetensors",
-    "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/Wan-AI/Wan2.2-TI2V-5B/diffusion_pytorch_model-00002-of-00003.safetensors",
-    "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/Wan-AI/Wan2.2-TI2V-5B/diffusion_pytorch_model-00003-of-00003.safetensors"
-].
-Using wan_video_vae from "/dev_vepfs/fly/resoning/DiffSynth-Studio/5B_Wan/DiffSynth-Studio/Wan-Series-Converted-Safetensors/Wan2.2_VAE.safetensors".
-No wan_video_image_encoder models available. This is not an error.
-No wan_video_motion_controller models available. This is not an error.
-No wan_video_vace models available. This is not an error.
-No wan_video_vap models available. This is not an error.
-No wans2v_audio_encoder models available. This is not an error.
-No wan_video_animate_adapter models available. This is not an error.
-  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:12<10:13, 12.51s/it]  4%|▍         | 2/50 [00:19<07:31,  9.40s/it]  6%|▌         | 3/50 [00:24<05:50,  7.47s/it]  8%|▊         | 4/50 [00:30<05:01,  6.56s/it] 10%|█         | 5/50 [00:35<04:32,  6.05s/it] 12%|█▏        | 6/50 [00:40<04:13,  5.75s/it] 14%|█▍        | 7/50 [00:45<03:59,  5.56s/it] 16%|█▌        | 8/50 [00:50<03:48,  5.44s/it] 18%|█▊        | 9/50 [00:56<03:45,  5.49s/it] 20%|██        | 10/50 [01:05<04:23,  6.60s/it] 22%|██▏       | 11/50 [01:13<04:35,  7.06s/it] 24%|██▍       | 12/50 [01:22<04:45,  7.52s/it] 26%|██▌       | 13/50 [01:31<04:55,  7.98s/it] 28%|██▊       | 14/50 [01:39<04:55,  8.21s/it] 30%|███       | 15/50 [01:49<05:00,  8.58s/it] 32%|███▏      | 16/50 [01:58<05:00,  8.84s/it] 34%|███▍      | 17/50 [02:07<04:55,  8.95s/it] 36%|███▌      | 18/50 [02:16<04:44,  8.88s/it] 38%|███▊      | 19/50 [02:25<04:33,  8.82s/it] 40%|████      | 20/50 [02:34<04:24,  8.80s/it] 42%|████▏     | 21/50 [02:43<04:16,  8.85s/it] 44%|████▍     | 22/50 [02:52<04:10,  8.94s/it] 46%|████▌     | 23/50 [03:00<03:56,  8.77s/it] 48%|████▊     | 24/50 [03:09<03:47,  8.74s/it] 50%|█████     | 25/50 [03:18<03:38,  8.76s/it] 52%|█████▏    | 26/50 [03:27<03:31,  8.81s/it] 54%|█████▍    | 27/50 [03:37<03:32,  9.25s/it] 56%|█████▌    | 28/50 [03:46<03:21,  9.17s/it] 58%|█████▊    | 29/50 [03:56<03:19,  9.52s/it] 60%|██████    | 30/50 [04:05<03:05,  9.30s/it] 62%|██████▏   | 31/50 [04:14<02:54,  9.19s/it] 64%|██████▍   | 32/50 [04:23<02:45,  9.17s/it] 66%|██████▌   | 33/50 [04:32<02:37,  9.26s/it] 68%|██████▊   | 34/50 [04:40<02:18,  8.65s/it] 70%|███████   | 35/50 [04:49<02:11,  8.76s/it] 72%|███████▏  | 36/50 [04:57<02:02,  8.77s/it] 74%|███████▍  | 37/50 [05:07<01:56,  8.96s/it] 76%|███████▌  | 38/50 [05:16<01:49,  9.12s/it] 78%|███████▊  | 39/50 [05:26<01:40,  9.13s/it] 80%|████████  | 40/50 [05:34<01:29,  8.99s/it] 82%|████████▏ | 41/50 [05:45<01:25,  9.47s/it] 84%|████████▍ | 42/50 [05:54<01:15,  9.45s/it] 86%|████████▌ | 43/50 [06:04<01:07,  9.60s/it] 88%|████████▊ | 44/50 [06:13<00:56,  9.39s/it] 90%|█████████ | 45/50 [06:22<00:45,  9.17s/it] 92%|█████████▏| 46/50 [06:28<00:33,  8.37s/it] 94%|█████████▍| 47/50 [06:33<00:22,  7.41s/it] 96%|█████████▌| 48/50 [06:39<00:13,  6.74s/it] 98%|█████████▊| 49/50 [06:44<00:06,  6.27s/it]100%|██████████| 50/50 [06:49<00:00,  5.93s/it]100%|██████████| 50/50 [06:49<00:00,  8.19s/it]
-VAE decoding:   0%|          | 0/4 [00:00<?, ?it/s]VAE decoding:  25%|██▌       | 1/4 [00:08<00:26,  8.72s/it]VAE decoding:  50%|█████     | 2/4 [00:14<00:14,  7.20s/it]VAE decoding:  75%|███████▌  | 3/4 [00:20<00:06,  6.63s/it]VAE decoding: 100%|██████████| 4/4 [00:26<00:00,  6.36s/it]VAE decoding: 100%|██████████| 4/4 [00:26<00:00,  6.69s/it]
-Saving video:   0%|          | 0/121 [00:00<?, ?it/s]Saving video:   1%|          | 1/121 [00:00<01:37,  1.23it/s]Saving video:  32%|███▏      | 39/121 [00:00<00:01, 57.82it/s]Saving video:  64%|██████▍   | 78/121 [00:01<00:00, 115.80it/s]Saving video:  94%|█████████▍| 114/121 [00:01<00:00, 164.37it/s]Saving video: 100%|██████████| 121/121 [00:01<00:00, 103.99it/s]
